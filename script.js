@@ -32,9 +32,12 @@ withdrawBtn.addEventListener('click', function () {
 
     const currentWithdraw = document.getElementById('currentWithdraw').innerText;
     const totalWithdraw = withdrawNumber + parseFloat(currentWithdraw);
-    
     document.getElementById('currentWithdraw').innerText = totalWithdraw;
-    
+
+    const totalAmount = document.getElementById('currentBalance').innerText;
+    const balanceUpdate = parseFloat(totalAmount) - withdrawNumber;
+    document.getElementById('currentBalance').innerText = balanceUpdate; 
+
 })
 
 
